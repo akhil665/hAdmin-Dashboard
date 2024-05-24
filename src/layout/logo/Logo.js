@@ -1,9 +1,9 @@
 import React from "react";
-import LogoLight2x from "../../images/logo2x.png";
-import LogoDark2x from "../../images/logo-dark2x.png";
+import LogoLight2x from "../../images/transparentlogo.png";
+import LogoDark2x from "../../images/transparentlogo.png";
 import { Link } from "react-router-dom";
 
-const Logo = ({to}) => {
+const Logo = ({ to }) => {
   return (
     <Link to={to ? to : `${process.env.PUBLIC_URL}/`} className="logo-link">
       <img className="logo-light logo-img" src={LogoLight2x} alt="logo" />

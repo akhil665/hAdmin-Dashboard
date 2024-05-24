@@ -38,9 +38,9 @@ const CampaignHomePage = () => {
         <BlockHead size="sm">
           <BlockBetween>
             <BlockHeadContent>
-              <BlockTitle page>Campaign Management</BlockTitle>
+              <BlockTitle page>Hospital Management</BlockTitle>
               <BlockDes className="text-soft">
-                <p>Welcome to Campaign Management Dashboard.</p>
+                <p>Welcome to Hospital Management Dashboard.</p>
               </BlockDes>
             </BlockHeadContent>
             <BlockHeadContent>
@@ -51,7 +51,7 @@ const CampaignHomePage = () => {
                 >
                   <Icon name="more-v" />
                 </Button>
-                <div className="toggle-expand-content" style={{ display: sm ? "block" : "none" }}>
+                {/* <div className="toggle-expand-content" style={{ display: sm ? "block" : "none" }}>
                   <ul className="nk-block-tools g-3">
                     <li>
                       <Button className="btn-dim btn-white btn-outline-light">
@@ -69,7 +69,7 @@ const CampaignHomePage = () => {
                       </Button>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </BlockHeadContent>
           </BlockBetween>
@@ -79,8 +79,8 @@ const CampaignHomePage = () => {
             <Col lg="3" sm="6">
               <CampaignInfoCard
                 theme="primary"
-                title="Running Campaign"
-                amount="56.8K"
+                title="Active Hospitals"
+                amount="2"
                 change="12.4%"
                 direction="up"
                 chart="line"
@@ -102,7 +102,7 @@ const CampaignHomePage = () => {
               <CampaignInfoCard
                 theme="warning"
                 title="Avg. Rating"
-                amount="9.3K"
+                amount="4.5"
                 change="12.4%"
                 direction="up"
                 chart="bar"
@@ -112,7 +112,7 @@ const CampaignHomePage = () => {
             <Col lg="3" sm="6">
               <CampaignInfoCard
                 theme="danger"
-                title="Subscriber"
+                title="Clicks"
                 amount="175.2K"
                 change="12.4%"
                 direction="up"
@@ -120,27 +120,28 @@ const CampaignHomePage = () => {
                 chartData={newSubscriber}
               />
             </Col>
+            <Col xxl="8">
+              <ActiveCampaign />
+            </Col>
             <Col xxl="8" lg="7">
-              <CampaignPerformance title="Performance Overview" chartData={performanceOverview} />
+              <CampaignPerformance title="Performance Overview (Departments)" chartData={performanceOverview} />
             </Col>
             <Col xxl="4" lg="5">
               <TopChannels />
             </Col>
-            <Col xxl="8">
-              <ActiveCampaign />
-            </Col>
+
             <Col xxl="4" md="6">
               <KeyStatistics />
             </Col>
-            <Col xxl="4" md="6">
+            {/* <Col xxl="4" md="6">
               <CampaignOverview />
-            </Col>
+            </Col> */}
             <Col xxl="4" md="6">
               <ClicksbyLocation />
             </Col>
-            <Col xxl="4" md="6">
+            {/* <Col xxl="4" md="6">
               <WebConvrate />
-            </Col>
+            </Col> */}
           </Row>
         </Block>
       </Content>
