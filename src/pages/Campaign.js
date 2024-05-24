@@ -33,7 +33,7 @@ const CampaignHomePage = () => {
   const [sm, updateSm] = useState(false);
   return (
     <React.Fragment>
-      <Head title="Campaign Dashboard" />
+      <Head title="Dash Board" />
       <Content>
         <BlockHead size="sm">
           <BlockBetween>
