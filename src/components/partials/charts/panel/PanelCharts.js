@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { Bar, Line } from "react-chartjs-2";
 
-import { Chart, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend, } from "chart.js";
-Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend,);
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Filler,
+  Legend,
+} from "chart.js";
 
 import {
   refBarChart,
@@ -18,6 +27,7 @@ import {
   summaryBalanceCurrent,
   summaryBalanceYear,
 } from "./PanelChartData";
+Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend);
 
 export const BalanceFlowChart = ({ state }) => {
   const [data, setData] = useState(mainBalance);
@@ -38,60 +48,60 @@ export const BalanceFlowChart = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
+            callbacks: {
+              label: function (context) {
+                return context.parsed.y + " BTC";
               },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
-              callbacks: {
-                label: function (context) {
-                    return context.parsed.y + " BTC";
-                },
-              },
+            },
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              ticks: {
-                beginAtZero: false,
-                fontSize: 12,
-                fontColor: "#9eaecf",
-                padding: 10,
-              },
-              gridLines: {
-                color: "rgba(82, 100, 132, 0.2)",
-                tickMarkLength: 0,
-                zeroLineColor: "rgba(82, 100, 132, 0.2)",
-              },
+          y: {
+            ticks: {
+              beginAtZero: false,
+              fontSize: 12,
+              fontColor: "#9eaecf",
+              padding: 10,
             },
-          x:{
-              ticks: {
-                fontSize: 12,
-                fontColor: "#9eaecf",
-                source: "auto",
-                padding: 5,
-              },
-              gridLines: {
-                color: "transparent",
-                tickMarkLength: 20,
-                zeroLineColor: "rgba(82, 100, 132, 0.2)",
-                offsetGridLines: true,
-              },
+            gridLines: {
+              color: "rgba(82, 100, 132, 0.2)",
+              tickMarkLength: 0,
+              zeroLineColor: "rgba(82, 100, 132, 0.2)",
             },
+          },
+          x: {
+            ticks: {
+              fontSize: 12,
+              fontColor: "#9eaecf",
+              source: "auto",
+              padding: 5,
+            },
+            gridLines: {
+              color: "transparent",
+              tickMarkLength: 20,
+              zeroLineColor: "rgba(82, 100, 132, 0.2)",
+              offsetGridLines: true,
+            },
+          },
         },
       }}
     />
@@ -118,45 +128,45 @@ export const ReferralCharts = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
+            callbacks: {
+              title: function () {
+                return false;
               },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
+              label: function (context) {
+                return `${context.parsed.y} people`;
               },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
-              callbacks: {
-                title: function () {
-                  return false; 
-                },
-                label: function (context) {
-                    return `${context.parsed.y} people`;
-                },
-              },
+            },
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            ticks: {
+              beginAtZero: true,
             },
-          x:{
-              display: false,
-            },
+          },
+          x: {
+            display: false,
+          },
         },
       }}
     />
@@ -168,42 +178,41 @@ export const AvailableBalanceCharts = ({ currency }) => {
     <Bar
       data={availableBalance}
       options={{
-        
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
+            callbacks: {
+              label: function (context) {
+                return `${context.parsed.y} + ${currency}`;
               },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
-              callbacks: {
-                label: function (context) {
-                    return `${context.parsed.y} + ${currency}`;
-                },
-              },
+            },
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-            },
+          y: {
+            display: false,
+          },
           x: {
-              display: false,
-            },
+            display: false,
+          },
         },
       }}
     />
@@ -232,60 +241,60 @@ export const BalanceSummaryChart = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
+            callbacks: {
+              label: function (context) {
+                return context.parsed.y + " BTC";
               },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
-              callbacks: {
-                label: function (context) {
-                    return context.parsed.y  + " BTC";
-                },
-              },
+            },
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              ticks: {
-                beginAtZero: false,
-                fontSize: 12,
-                fontColor: "#9eaecf",
-                padding: 10,
-              },
-              gridLines: {
-                color: "rgba(82, 100, 132, 0.2)",
-                tickMarkLength: 0,
-                zeroLineColor: "rgba(82, 100, 132, 0.2)",
-              },
+          y: {
+            ticks: {
+              beginAtZero: false,
+              fontSize: 12,
+              fontColor: "#9eaecf",
+              padding: 10,
             },
-          x:{
-              ticks: {
-                fontSize: 12,
-                fontColor: "#9eaecf",
-                source: "auto",
-                padding: 5,
-              },
-              gridLines: {
-                color: "transparent",
-                tickMarkLength: 20,
-                zeroLineColor: "rgba(82, 100, 132, 0.2)",
-                offsetGridLines: true,
-              },
+            gridLines: {
+              color: "rgba(82, 100, 132, 0.2)",
+              tickMarkLength: 0,
+              zeroLineColor: "rgba(82, 100, 132, 0.2)",
             },
+          },
+          x: {
+            ticks: {
+              fontSize: 12,
+              fontColor: "#9eaecf",
+              source: "auto",
+              padding: 5,
+            },
+            gridLines: {
+              color: "transparent",
+              tickMarkLength: 20,
+              zeroLineColor: "rgba(82, 100, 132, 0.2)",
+              offsetGridLines: true,
+            },
+          },
         },
       }}
     />

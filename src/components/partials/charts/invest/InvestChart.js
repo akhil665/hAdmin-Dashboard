@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 
-import { Chart, CategoryScale, LinearScale, BarElement, PointElement, Tooltip, Legend, } from "chart.js";
-Chart.register(CategoryScale, LinearScale, BarElement, PointElement, Tooltip, Legend,);
+import { Chart, CategoryScale, LinearScale, BarElement, PointElement, Tooltip, Legend } from "chart.js";
 
 import {
   planPurchase,
@@ -13,7 +12,7 @@ import {
   totalDeposit,
   totalWithdraw,
 } from "./InvestData";
-
+Chart.register(CategoryScale, LinearScale, BarElement, PointElement, Tooltip, Legend);
 export const DepositBarChart = () => {
   return (
     <Bar
@@ -22,37 +21,37 @@ export const DepositBarChart = () => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
-              },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            ticks: {
+              beginAtZero: true,
             },
-          x:{
-              display: false,
-            },
+          },
+          x: {
+            display: false,
+          },
         },
       }}
     ></Bar>
@@ -67,37 +66,37 @@ export const BalanceBarChart = () => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
-              },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            ticks: {
+              beginAtZero: true,
             },
+          },
           x: {
-              display: false,
-            },
+            display: false,
+          },
         },
       }}
     ></Bar>
@@ -112,37 +111,37 @@ export const WithdrawBarChart = () => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
-              },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            ticks: {
+              beginAtZero: true,
             },
-          x:{
-              display: false,
-            },
+          },
+          x: {
+            display: false,
+          },
         },
       }}
     ></Bar>
@@ -170,37 +169,37 @@ export const PurchasePlanChart = ({ set }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
-              },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            ticks: {
+              beginAtZero: true,
             },
+          },
           x: {
-              display: false,
-            },
+            display: false,
+          },
         },
       }}
     ></Bar>

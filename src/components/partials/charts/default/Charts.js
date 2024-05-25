@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Bar, Line } from "react-chartjs-2";
 
-import { Chart, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend, } from "chart.js";
-Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend,);
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Filler,
+  Legend,
+} from "chart.js";
 
 import {
   saleRevenue,
@@ -20,7 +29,7 @@ import {
   userActivitySet3,
   userActivitySet4,
 } from "./Data";
-
+Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Filler, Legend);
 export const BarChart = ({ sales }) => {
   return (
     <Bar
@@ -29,24 +38,24 @@ export const BarChart = ({ sales }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '11px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 4,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '10px',
-              },
-              bodySpacing: 3,
-              padding: 8,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "11px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 4,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "10px",
+            },
+            bodySpacing: 3,
+            padding: 8,
+            footerMarginTop: 0,
           },
         },
         scales: {
@@ -75,29 +84,29 @@ export const LineChart = () => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
+            callbacks: {
+              label: function (context) {
+                return context.parsed.y;
               },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
-              callbacks: {
-                label: function (context) {
-                    return context.parsed.y;
-                },
-              },
+            },
           },
         },
         maintainAspectRatio: false,
@@ -125,40 +134,40 @@ export const LineChart = () => {
         },
         scales: {
           y: {
-              display: true,
-              ticks: {
-                beginAtZero: true,
-                color:"#9eaecf", 
-                font: {
-                  size: '11px',
-                },
-                callback: function (value, index, values) {
-                  return "$ " + value;
-                },
-                padding: 10,
-                min: 100,
-                stepSize: 3000,
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              color: "#9eaecf",
+              font: {
+                size: "11px",
               },
-              grid: {
-                tickMarkLength: 0,
+              callback: function (value, index, values) {
+                return "$ " + value;
               },
+              padding: 10,
+              min: 100,
+              stepSize: 3000,
             },
-          x:{
-              display: true,
-              ticks: {
-                color:"#9eaecf", 
-                font: {
-                  size: '9px',
-                },
-                source: "auto",
-                padding: 10,
-              },
-              grid: {
-                color: "transparent",
-                tickMarkLength: 0,
-                zeroLineColor: "transparent",
-              },
+            grid: {
+              tickMarkLength: 0,
             },
+          },
+          x: {
+            display: true,
+            ticks: {
+              color: "#9eaecf",
+              font: {
+                size: "9px",
+              },
+              source: "auto",
+              padding: 10,
+            },
+            grid: {
+              color: "transparent",
+              tickMarkLength: 0,
+              zeroLineColor: "transparent",
+            },
+          },
         },
       }}
     />
@@ -187,65 +196,65 @@ export const DoubleBar = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: true,
-              ticks: {
-                beginAtZero: true,
-                color:"#9eaecf", 
-                font: {
-                  size: '11px',
-                },
-                padding: 10,
-                callback: function (value, index, values) {
-                  return "$ " + value;
-                },
-                min: 100,
-                max: 5000,
-                stepSize: 1200,
+          y: {
+            display: true,
+            ticks: {
+              beginAtZero: true,
+              color: "#9eaecf",
+              font: {
+                size: "11px",
               },
-              grid: {
-                tickMarkLength: 0,
+              padding: 10,
+              callback: function (value, index, values) {
+                return "$ " + value;
               },
+              min: 100,
+              max: 5000,
+              stepSize: 1200,
             },
-          x:{
-              display: true,
-              ticks: {
-                color:"#9eaecf", 
-                font: {
-                  size: '11px',
-                },
-                source: "auto",
-                padding: 10,
-                stepSize: 2400,
-              },
-              grid: {
-                color: "transparent",
-                tickMarkLength: 0,
-                zeroLineColor: "transparent",
-              },
+            grid: {
+              tickMarkLength: 0,
             },
+          },
+          x: {
+            display: true,
+            ticks: {
+              color: "#9eaecf",
+              font: {
+                size: "11px",
+              },
+              source: "auto",
+              padding: 10,
+              stepSize: 2400,
+            },
+            grid: {
+              color: "transparent",
+              tickMarkLength: 0,
+              zeroLineColor: "transparent",
+            },
+          },
         },
       }}
     />
@@ -272,57 +281,57 @@ export const HorizontalBarChart = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
           },
         },
         indexAxis: "y",
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              stacked: true,
-              ticks: {
-                beginAtZero: true,
-                padding: 0,
-              },
-              grid: {
-                tickMarkLength: 0,
-              },
+          y: {
+            display: false,
+            stacked: true,
+            ticks: {
+              beginAtZero: true,
+              padding: 0,
             },
-          x:{
-              display: false,
-              stacked: true,
-              ticks: {
-                color:"#9eaecf", 
-                font: {
-                  size: '9px',
-                },
-                source: "auto",
-                padding: 0,
-              },
-              grid: {
-                color: "transparent",
-                tickMarkLength: 0,
-                zeroLineColor: "transparent",
-              },
+            grid: {
+              tickMarkLength: 0,
             },
+          },
+          x: {
+            display: false,
+            stacked: true,
+            ticks: {
+              color: "#9eaecf",
+              font: {
+                size: "9px",
+              },
+              source: "auto",
+              padding: 0,
+            },
+            grid: {
+              color: "transparent",
+              tickMarkLength: 0,
+              zeroLineColor: "transparent",
+            },
+          },
         },
       }}
     />
@@ -349,39 +358,39 @@ export const StackedBarChart = ({ state }) => {
       options={{
         plugins: {
           legend: {
-              display: false,
+            display: false,
           },
           tooltip: {
-              enabled: true,
-              displayColors: false,
-              backgroundColor: "#eff6ff",
-              titleFont: {
-                size: '13px',
-              },
-              titleColor: "#6783b8",
-              titleMarginBottom: 6,
-              bodyColor: "#9eaecf",
-              bodyFont: {
-                size: '12px',
-              },
-              bodySpacing: 4,
-              padding: 10,
-              footerMarginTop: 0,
+            enabled: true,
+            displayColors: false,
+            backgroundColor: "#eff6ff",
+            titleFont: {
+              size: "13px",
+            },
+            titleColor: "#6783b8",
+            titleMarginBottom: 6,
+            bodyColor: "#9eaecf",
+            bodyFont: {
+              size: "12px",
+            },
+            bodySpacing: 4,
+            padding: 10,
+            footerMarginTop: 0,
           },
         },
         maintainAspectRatio: false,
         scales: {
-          y:{
-              display: false,
-              stacked: true,
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: false,
+            stacked: true,
+            ticks: {
+              beginAtZero: true,
             },
-          x:{
-              display: false,
-              stacked: true,
-            },
+          },
+          x: {
+            display: false,
+            stacked: true,
+          },
         },
       }}
     />
