@@ -115,8 +115,8 @@ export const menu = [
   },
   {
     icon: "users-fill",
-    text: "Manage Team",
-    link: "/invest",
+    text: "Manage Hospital",
+    link: "/hospital-listing",
   },
   {
     icon: "file-fill",
@@ -611,68 +611,68 @@ export const menu = [
   // },
 ];
 export const headermenu = [
-  {
-    text: "Dashboards",
-    link: "#",
-    active: false,
-    subMenu: [
-      {
-        text: "Default Dashboard",
-        link: "/",
-      },
-      {
-        text: "Sales Dashboard",
-        link: "/sales",
-      },
-      {
-        text: "Invest Dashboard",
-        link: "/invest",
-      },
-      {
-        text: "Crypto Dashboard",
-        link: "/crypto",
-      },
-      {
-        text: "Analytics Dashboard",
-        link: "/analytics",
-      },
-    ],
-  },
-  {
-    text: "Apps",
-    link: "#",
-    active: false,
-    subMenu: [
-      {
-        text: "Messages",
-        link: "/app-messages",
-      },
-      {
-        text: "Inbox / Mail",
-        link: "/app-inbox",
-      },
-      {
-        text: "File Manager",
-        link: "/app-file-manager",
-      },
-      {
-        text: "Chats / Messenger",
-        link: "/app-chat",
-      },
-      {
-        text: "Calendar",
-        link: "/app-calender",
-      },
-      {
-        text: "Kanban Board",
-        link: "/app-kanban",
-      },
-    ],
-  },
-  {
-    text: "Components",
-    link: "/components",
-  },
+  // {
+  //   text: "Dashboards",
+  //   link: "#",
+  //   active: false,
+  //   subMenu: [
+  //     {
+  //       text: "Default Dashboard",
+  //       link: "/",
+  //     },
+  //     {
+  //       text: "Sales Dashboard",
+  //       link: "/sales",
+  //     },
+  //     {
+  //       text: "Invest Dashboard",
+  //       link: "/invest",
+  //     },
+  //     {
+  //       text: "Crypto Dashboard",
+  //       link: "/crypto",
+  //     },
+  //     {
+  //       text: "Analytics Dashboard",
+  //       link: "/analytics",
+  //     },
+  //   ],
+  // },
+  // {
+  //   text: "Apps",
+  //   link: "#",
+  //   active: false,
+  //   subMenu: [
+  //     {
+  //       text: "Messages",
+  //       link: "/app-messages",
+  //     },
+  //     {
+  //       text: "Inbox / Mail",
+  //       link: "/app-inbox",
+  //     },
+  //     {
+  //       text: "File Manager",
+  //       link: "/app-file-manager",
+  //     },
+  //     {
+  //       text: "Chats / Messenger",
+  //       link: "/app-chat",
+  //     },
+  //     {
+  //       text: "Calendar",
+  //       link: "/app-calender",
+  //     },
+  //     {
+  //       text: "Kanban Board",
+  //       link: "/app-kanban",
+  //     },
+  //   ],
+  // },
+  // {
+  //   text: "Components",
+  //   link: "/components",
+  // },
 ];
 
 export const copywritermenu = [

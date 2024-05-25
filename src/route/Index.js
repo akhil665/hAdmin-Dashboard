@@ -135,6 +135,7 @@ import Success from "../pages/auth/Success";
 import Layout from "../layout/Index";
 import LayoutNoSidebar from "../layout/Index-nosidebar";
 import LayoutCopywriter from "../layout/Index-copywriter";
+import HospitalListing from "../pages/Hospital/HospitalListing";
 
 const Pages = () => {
   const location = useLocation();
@@ -167,6 +168,7 @@ const Pages = () => {
         <Route path="invest" element={<Invest />}></Route>
         <Route path="sales" element={<Sales />}></Route>
         <Route path="_blank" element={<Blank />}></Route>
+        <Route path="hospital-Listing" element={<HospitalListing />}></Route>
 
         <Route path="project-card" element={<ProjectCardPage />}></Route>
         <Route path="project-list" element={<ProjectListPage />}></Route>
