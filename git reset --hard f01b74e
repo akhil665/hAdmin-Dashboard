@@ -1,0 +1,44 @@
+[33ma5e3251[m[33m ([m[1;36mHEAD -> [m[1;32mworking-branch[m[33m, [m[1;31morigin/working-branch[m[33m)[m HEAD@{0}: checkout: moving from main to working-branch
+[33m9b8c122[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: checkout: moving from working-branch to main
+[33ma5e3251[m[33m ([m[1;36mHEAD -> [m[1;32mworking-branch[m[33m, [m[1;31morigin/working-branch[m[33m)[m HEAD@{2}: commit: new log in page added
+[33m9b8c122[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{3}: checkout: moving from working-branch to working-branch
+[33m9b8c122[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: checkout: moving from main to working-branch
+[33m9b8c122[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: commit: git ignore
+[33m8b374be[m HEAD@{6}: commit: new commit
+[33mdc07760[m HEAD@{7}: commit: Remove .env file
+[33m30cb44e[m HEAD@{8}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33mcc78663[m HEAD@{9}: commit: bug
+[33mf01b74e[m HEAD@{10}: reset: moving to HEAD~1
+[33m091843c[m HEAD@{11}: pull --tags origin main: Fast-forward
+[33mf01b74e[m HEAD@{12}: reset: moving to HEAD~1
+[33m091843c[m HEAD@{13}: reset: moving to HEAD~1
+[33m509626b[m HEAD@{14}: reset: moving to HEAD~1
+[33mdd78122[m HEAD@{15}: reset: moving to HEAD~1
+[33mefc49b9[m HEAD@{16}: reset: moving to HEAD~1
+[33mb89fe92[m HEAD@{17}: reset: moving to HEAD~1
+[33m35b01d7[m HEAD@{18}: reset: moving to HEAD~1
+[33m154efff[m HEAD@{19}: reset: moving to HEAD~1
+[33m3c3fabc[m HEAD@{20}: reset: moving to HEAD~1
+[33m50361e4[m HEAD@{21}: reset: moving to HEAD~1
+[33m6383fb7[m HEAD@{22}: reset: moving to HEAD~1
+[33m8118802[m HEAD@{23}: reset: moving to HEAD~1
+[33me643b93[m HEAD@{24}: commit: bug fixed
+[33m8118802[m HEAD@{25}: commit: bug
+[33m6383fb7[m HEAD@{26}: commit: bug fixed
+[33m50361e4[m HEAD@{27}: commit: bug fixed
+[33m3c3fabc[m HEAD@{28}: commit: bug fixeed
+[33m154efff[m HEAD@{29}: commit: secret removed
+[33m35b01d7[m HEAD@{30}: commit: bug fixed
+[33mb89fe92[m HEAD@{31}: commit: image api done
+[33mefc49b9[m HEAD@{32}: commit: image aoi added
+[33mdd78122[m HEAD@{33}: commit: hospital listing done
+[33m509626b[m HEAD@{34}: commit: otp modal implemented
+[33m091843c[m HEAD@{35}: commit: hospital page added
+[33mf01b74e[m HEAD@{36}: commit: new page created
+[33mc62a5d1[m HEAD@{37}: commit: sidebar done
+[33m9546168[m HEAD@{38}: commit: dashBoard design changed
+[33m9a3ee5b[m HEAD@{39}: commit: title changed
+[33m26e1497[m HEAD@{40}: Branch: renamed refs/heads/main to refs/heads/main
+[33m26e1497[m HEAD@{42}: checkout: moving from main to main
+[33m26e1497[m HEAD@{43}: Branch: renamed refs/heads/master to refs/heads/main
+[33m26e1497[m HEAD@{45}: commit (initial): first commit
