@@ -1,9 +1,8 @@
 import axios from "axios";
 //login page axios code
-import { API_URL } from "../utils/const";
 
-// const API_URL = process.env.REACT_APP_API_URL;
-console.log("🚀 + API_URL:", API_URL);
+const API_URL = process.env.REACT_APP_API_URL;
+
 const token = localStorage.getItem("userToken");
 
 const login = (formData, setError, setLoading) => {
