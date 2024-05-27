@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../../../services/auth";
+import NewLoginModal from "./NowLoginModal";
 
 const NewLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -175,7 +176,7 @@ const NewLogin = () => {
             </Components.OverlayContainer>
           </Components.Container>
         </div>
-        {/* <NewLoginModal setModalSm={setModalSm} modalSm={modalSm} /> */}
+        <NewLoginModal setModalSm={setModalSm} modalSm={modalSm} />
       </Block>
       <AuthFooter />
     </>
