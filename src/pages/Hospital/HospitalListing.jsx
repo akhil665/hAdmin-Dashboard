@@ -230,10 +230,7 @@ const HospitalListing = () => {
                             </span>
                           </a>
 
-                          <Link
-                            to={`${process.env.PUBLIC_URL}/subscription/department/${item.name}`}
-                            className="link link-sm"
-                          >
+                          <Link to={`${process.env.PUBLIC_URL}/department/${item.name}`} className="link link-sm">
                             <span>
                               <Icon name="plus-circle-fill" id={"Add-Department"} className="pe-auto" />
                               <TooltipItem
@@ -245,10 +242,7 @@ const HospitalListing = () => {
                               />
                             </span>
                           </Link>
-                          <Link
-                            to={`${process.env.PUBLIC_URL}/subscription/hospital-editing/${item.name}`}
-                            className="link link-sm"
-                          >
+                          <Link to={`${process.env.PUBLIC_URL}/hospital-editing/${item.name}`} className="link link-sm">
                             <span>
                               <Icon name="edit" id={"Edit-Hospital"} className="pe-auto" />
                               <TooltipItem

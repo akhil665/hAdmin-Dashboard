@@ -252,7 +252,7 @@ function Hospital() {
       <Block size="lg">
         <BlockHead>
           <BlockHeadContent>
-            <BackTo link="/subscription/hospital-listing" icon="arrow-left">
+            <BackTo link="/hospital-listing" icon="arrow-left">
               Go back
             </BackTo>
             <BlockTitle tag="h5">New Hospital Adding </BlockTitle>
