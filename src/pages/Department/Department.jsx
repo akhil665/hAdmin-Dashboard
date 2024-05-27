@@ -9,16 +9,16 @@ import {
   BackTo,
   PreviewCard,
   BlockTitle,
-} from "../../../../components/Component";
-import avatarImg from "../../../../images/avatar/avatar.JPG.png";
+} from "../../components/Component";
+import avatarImg from "../../images/avatar/avatar.jpg";
 import axios from "axios";
 import { Alert, Form, Tooltip } from "reactstrap";
-import Content from "../../../../layout/content/Content";
+import Content from "../../layout/content/Content";
 import { useParams } from "react-router";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
-import ModalFormInput from "../Modal/DepartmentEditModal";
+import ModalFormInput from "./DepartmentEditModal";
 
 function Department() {
   const { hospitalName } = useParams();
@@ -195,7 +195,7 @@ function Department() {
     <Content>
       <BlockHead size="lg">
         <BlockHeadContent>
-          <BackTo link="/subscription/hospital-listing" icon="arrow-left">
+          <BackTo link="/hospital-listing" icon="arrow-left">
             Go back
           </BackTo>
           <BlockTitle tag="h5">New Department Adding</BlockTitle>
