@@ -136,6 +136,7 @@ import Layout from "../layout/Index";
 import LayoutNoSidebar from "../layout/Index-nosidebar";
 import LayoutCopywriter from "../layout/Index-copywriter";
 import HospitalListing from "../pages/Hospital/HospitalListing";
+import NewLogin from "../pages/auth/newLogin/NewLogin";
 
 const Pages = () => {
   const location = useLocation();
@@ -300,7 +301,8 @@ const Pages = () => {
         <Route path="auth-success" element={<Success />}></Route>
         <Route path="auth-reset" element={<ForgotPassword />}></Route>
         <Route path="auth-register" element={<Register />}></Route>
-        <Route path="auth-login" element={<Login />}></Route>
+        {/* <Route path="auth-login" element={<Login />}></Route> */}
+        <Route path="auth-login" element={<NewLogin />}></Route>
 
         <Route path="errors">
           <Route path="404-modern" element={<Error404Modern />}></Route>
