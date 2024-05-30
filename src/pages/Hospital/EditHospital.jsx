@@ -106,7 +106,7 @@ function EditHospital() {
       hospital_disease: reSelectData,
       category: mainCategory["value"],
       /*  images: imageData,
-      image: thumbnailImg,
+      image: thumbna ilImg,
       img: headPhysicianImg, */
       ...(imageData && imageData.length > 0 ? { images: imageData } : null),
       ...(thumbnailImg ? { image: thumbnailImg } : null),
