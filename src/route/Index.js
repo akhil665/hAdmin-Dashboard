@@ -137,6 +137,9 @@ import LayoutNoSidebar from "../layout/Index-nosidebar";
 import LayoutCopywriter from "../layout/Index-copywriter";
 import HospitalListing from "../pages/Hospital/HospitalListing";
 import NewLogin from "../pages/auth/newLogin/NewLogin";
+import Hospital from "../pages/Hospital/Hospital";
+import EditHospital from "../pages/Hospital/EditHospital";
+import Department from "../pages/Department/Department";
 
 const Pages = () => {
   const location = useLocation();
@@ -170,6 +173,9 @@ const Pages = () => {
         <Route path="sales" element={<Sales />}></Route>
         <Route path="_blank" element={<Blank />}></Route>
         <Route path="hospital-Listing" element={<HospitalListing />}></Route>
+        <Route path="hospital" element={<Hospital />}></Route>
+        <Route path="hospital-editing/:id" element={<EditHospital />}></Route>
+        <Route path="department/:hospitalName" element={<Department />}></Route>
 
         <Route path="project-card" element={<ProjectCardPage />}></Route>
         <Route path="project-list" element={<ProjectListPage />}></Route>
