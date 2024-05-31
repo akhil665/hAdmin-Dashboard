@@ -140,6 +140,7 @@ import NewLogin from "../pages/auth/newLogin/NewLogin";
 import Hospital from "../pages/Hospital/Hospital";
 import EditHospital from "../pages/Hospital/EditHospital";
 import Department from "../pages/Department/Department";
+import UserContactCardPage from "../pages/doctor/doctor_card";
 
 const Pages = () => {
   const location = useLocation();
@@ -176,6 +177,8 @@ const Pages = () => {
         <Route path="hospital" element={<Hospital />}></Route>
         <Route path="hospital-editing/:id" element={<EditHospital />}></Route>
         <Route path="department/:hospitalName" element={<Department />}></Route>
+
+        <Route path="dotorcard" element={<UserContactCardPage />}></Route>
 
         <Route path="project-card" element={<ProjectCardPage />}></Route>
         <Route path="project-list" element={<ProjectListPage />}></Route>
@@ -278,6 +281,7 @@ const Pages = () => {
           <Route path="widgets">
             <Route path="cards" element={<CardWidgets />}></Route>
             <Route path="charts" element={<ChartWidgets />}></Route>
+            <Route path="rating" element={<RatingWidgets />}></Route>
             <Route path="rating" element={<RatingWidgets />}></Route>
           </Route>
 
