@@ -38,7 +38,7 @@ export const menu = [
   {
     icon: "plus-medi-fill",
     text: "Doctors",
-    link: "/analytics",
+    link: "/dotorcard",
   },
 
   {

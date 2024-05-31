@@ -178,8 +178,6 @@ const Pages = () => {
         <Route path="hospital-editing/:id" element={<EditHospital />}></Route>
         <Route path="department/:hospitalName" element={<Department />}></Route>
 
-        <Route path="dotorcard" element={<UserContactCardPage />}></Route>
-
         <Route path="project-card" element={<ProjectCardPage />}></Route>
         <Route path="project-list" element={<ProjectListPage />}></Route>
 
@@ -188,6 +186,7 @@ const Pages = () => {
           <Route path="user-list-compact" element={<UserListCompact />}></Route>
           <Route path="user-contact-card" element={<UserContactCard />}></Route>
           <Route path="user-details-regular/:userId" element={<UserDetails />}></Route>
+          <Route path="dotorcard" element={<UserContactCardPage />}></Route>
         </Route>
 
         <Route>

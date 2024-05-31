@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
-import Content from "../../../layout/content/Content";
-import Head from "../../../layout/head/Head";
+
+import Content from "../../layout/content/Content";
+import Head from "../../layout/head/Head";
 import { DropdownMenu, DropdownToggle, UncontrolledDropdown, DropdownItem } from "reactstrap";
 import {
   Block,
@@ -15,12 +16,12 @@ import {
   UserAvatar,
   Button,
   PreviewAltCard,
-} from "../../../components/Component";
+} from "../../components/Component";
 import { Link } from "react-router-dom";
-import { userData } from "./UserData";
-import { findUpper } from "../../../utils/Utils";
-import { UserContext } from "./UserContext";
-import CardFormModal from "./CardFormModal";
+import { userData } from "../../../src/pages/pre-built/user-manage/UserData";
+import { findUpper } from "../../utils/Utils";
+import { UserContext } from "../../../src/pages/pre-built/user-manage/UserContext";
+import CardFormModal from "../../../src/pages/pre-built/user-manage/CardFormModal";
 
 const UserContactCardPage = () => {
   const { contextData } = useContext(UserContext);
