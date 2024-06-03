@@ -141,12 +141,11 @@ const UserContactCardPage = () => {
 
   return (
     <React.Fragment>
-      <Head title="User Contact - Card"></Head>
       <Content>
         <BlockHead size="sm">
           <BlockBetween>
             <BlockHeadContent>
-              <BlockTitle page>User's Card</BlockTitle>
+              <BlockTitle page>Doctor/Nurse</BlockTitle>
               <BlockDes className="text-soft">
                 <p>You have total 2,595 users.</p>
               </BlockDes>
@@ -166,14 +165,15 @@ const UserContactCardPage = () => {
                 <div className="toggle-expand-content" style={{ display: smOption ? "block" : "none" }}>
                   <ul className="nk-block-tools g-3">
                     <li>
-                      <Button color="light" outline className="btn-white">
+                      {/*   <Button color="light" outline className="btn-white">
                         <Icon name="download-cloud"></Icon>
                         <span>Export</span>
-                      </Button>
+                      </Button */}
                     </li>
                     <li className="nk-block-tools-opt">
                       <Button color="primary" className="btn-icon" onClick={() => setModal({ add: true })}>
                         <Icon name="plus"></Icon>
+                        Add Doctor/Nurse
                       </Button>
                     </li>
                   </ul>
@@ -183,118 +183,15 @@ const UserContactCardPage = () => {
           </BlockBetween>
         </BlockHead>
 
-        <Block>
-          <Row className="g-gs">
-            {data.slice(0, 4).map((item) => {
-              return (
-                <Col sm="6" lg="4" xxl="3" key={item.id}>
-                  <PreviewAltCard>
-                    <div className="team">
-                      <div
-                        className={`team-status ${
-                          item.status === "Active"
-                            ? "bg-success text-white"
-                            : item.status === "Pending"
-                            ? "bg-warning text-white"
-                            : "bg-danger text-white"
-                        } `}
-                      >
-                        <Icon
-                          name={`${
-                            item.status === "Active" ? "check-thick" : item.status === "Pending" ? "clock" : "na"
-                          }`}
-                        ></Icon>
-                      </div>
-                      <div className="team-options">
-                        <UncontrolledDropdown>
-                          <DropdownToggle tag="a" className="dropdown-toggle btn btn-icon btn-trigger">
-                            <Icon name="more-h"></Icon>
-                          </DropdownToggle>
-                          <DropdownMenu end>
-                            <ul className="link-list-opt no-bdr">
-                              <li onClick={() => onEditClick(item.id)}>
-                                <DropdownItem
-                                  tag="a"
-                                  href="#edit"
-                                  onClick={(ev) => {
-                                    ev.preventDefault();
-                                  }}
-                                >
-                                  <Icon name="edit"></Icon>
-                                  <span>Edit</span>
-                                </DropdownItem>
-                              </li>
-                              {item.status !== "Suspend" && (
-                                <React.Fragment>
-                                  <li className="divider"></li>
-                                  <li onClick={() => suspendUser(item.id)}>
-                                    <DropdownItem
-                                      tag="a"
-                                      href="#suspend"
-                                      onClick={(ev) => {
-                                        ev.preventDefault();
-                                      }}
-                                    >
-                                      <Icon name="na"></Icon>
-                                      <span>Suspend User</span>
-                                    </DropdownItem>
-                                  </li>
-                                </React.Fragment>
-                              )}
-                            </ul>
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
-                      </div>
-                      <div className="user-card user-card-s2">
-                        <UserAvatar theme={item.avatarBg} className="md" text={findUpper(item.name)} image={item.image}>
-                          <div className="status dot dot-lg dot-success"></div>
-                        </UserAvatar>
-                        <div className="user-info">
-                          <h6>{item.name}</h6>
-                          <span className="sub-text">@{item.name.split(" ")[0].toLowerCase()}</span>
-                        </div>
-                      </div>
-                      <div className="team-details">
-                        <p>I am {item.designation} and love to be creative.</p>
-                      </div>
-                      <ul className="team-statistics">
-                        <li>
-                          <span>{item.projects}</span>
-                          <span>Projects</span>
-                        </li>
-                        <li>
-                          <span>{item.performed}%</span>
-                          <span>Performed</span>
-                        </li>
-                        <li>
-                          <span>{item.tasks}</span>
-                          <span>Tasks</span>
-                        </li>
-                      </ul>
-                      <div className="team-view">
-                        <Link to={`${process.env.PUBLIC_URL}/user-details-regular/${item.id}`}>
-                          <Button outline color="light" className="btn-round w-150px">
-                            <span>View Profile</span>
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </PreviewAltCard>
-                </Col>
-              );
-            })}
-          </Row>
-        </Block>
-
         <Block size="lg">
           <BlockHead>
             <BlockBetween>
-              <BlockHeadContent>
-                <BlockTitle tag="h4">User's Cards Alternate</BlockTitle>
+              {/*  <BlockHeadContent>
+                <BlockTitle tag="h4">Doctor/Nurse</BlockTitle>
                 <BlockDes className="text-soft">
                   <p>An alternate version of user card here.</p>
                 </BlockDes>
-              </BlockHeadContent>
+              </BlockHeadContent> */}
             </BlockBetween>
           </BlockHead>
           <Row className="g-gs">
@@ -342,15 +239,27 @@ const UserContactCardPage = () => {
                         <UserAvatar theme={item.avatarBg} className="lg" text={findUpper(item.name)} image={item.image}>
                           <div className="status dot dot-lg dot-success"></div>
                         </UserAvatar>
+
                         <div className="user-info">
                           <h6>{item.name}</h6>
                           <span className="sub-text">@{item.name.split(" ")[0].toLowerCase()}</span>
                         </div>
+                        <span
+                          className="badge rounded-pill bg-primary"
+                          style={{ display: "block", textAlign: "center" }}
+                        >
+                          Doctor
+                        </span>
                       </div>
-                      <div className="team-details">
+
+                      {/* <div className="team-details">
                         <p>UI/UX Designer</p>
-                      </div>
+                      </div> */}
                       <ul className="team-info">
+                        <li>
+                          <span>Department</span>
+                          <span>Gastroenterology</span>
+                        </li>
                         <li>
                           <span>Join Date</span>
                           <span>24 Jun 2015</span>
